@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:background=""
+    android:orientation="vertical">
 
-    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        >
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"/>
+            android:text="Email" />
 
         <EditText
 
@@ -22,37 +25,78 @@
             android:selectAllOnFocus="false"
             android:singleLine="false" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contraseña"/>
+            android:text="Contraseña" />
+
         <EditText
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
             android:id="@+id/entrar"
-            android:layout_height="wrap_content"
-            android:text="Entrar"
-            />
-        <Button
-            android:layout_marginTop="70dp"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resgitrate gratis"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/botonverde"
+            android:textColor="#ffffff"
+            android:text="ENTRAR" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#535151"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:background="#00123456"
+            android:text="@string/texto_registrate" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/facebook"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/googleplus"/>
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
