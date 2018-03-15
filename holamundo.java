@@ -6,3 +6,6 @@ public HolaGema(){
 public HolaVictoria(){
 }
 }
+
+public GemmaEsTonta(){
+}
