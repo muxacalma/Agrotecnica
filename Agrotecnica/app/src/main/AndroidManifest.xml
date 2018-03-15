@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Categorias"></activity>
-        <activity android:name=".ListaProductos"></activity>
-        <activity android:name=".Gracias"></activity>
+        <activity android:name=".Categorias" />
+        <activity android:name=".ListaProductos" />
+        <activity android:name=".Gracias" />
+        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>
