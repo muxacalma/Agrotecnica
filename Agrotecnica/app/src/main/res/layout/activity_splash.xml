@@ -8,6 +8,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_centerInParent="true"
         android:id="@+id/mundo"
         android:contentDescription="@string/app_name"
@@ -16,3 +17,9 @@
 
 
 </RelativeLayout>
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Hola" />
+</RelativeLayout>
+>>>>>>> 788d118c658e4aab0f9eeba20bdd94ecfa9eb76e

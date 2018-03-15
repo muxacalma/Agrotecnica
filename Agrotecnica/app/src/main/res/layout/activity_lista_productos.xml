@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.androidnoobs.agrotecnica.agrotecnica.ListaProductos">
 
+    <ListView
+        android:id="@+id/listProducto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
