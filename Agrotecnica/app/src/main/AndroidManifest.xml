@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".Categorias"></activity>
 =======
+=======
+        <activity android:name=".ListaProductos"></activity>
+>>>>>>> a8b91896a5b282e7bc2b3abd7b6aa8a3b4fb3e43
         <activity android:name=".Gracias"></activity>
 >>>>>>> 4fc32e697d33781d8ab6e325d6e6d77adf881ed6
     </application>
