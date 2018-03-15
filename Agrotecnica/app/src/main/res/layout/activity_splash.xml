@@ -3,12 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-<<<<<<< HEAD
-=======
-    android:orientation="vertical"
->>>>>>> 7c1697dc7dcfdfcda97b56c41f8b8a0d6327389f
-    tools:context="com.androidnoobs.agrotecnica.agrotecnica.Splash">
+    android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
