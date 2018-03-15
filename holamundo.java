@@ -1,5 +1,5 @@
 public class HolaGema {
 	
-public HolaGema{
+public HolaGema(){
 }
 }
