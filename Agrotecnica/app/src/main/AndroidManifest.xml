@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".Categorias"></activity>
+=======
+        <activity android:name=".Gracias"></activity>
+>>>>>>> 4fc32e697d33781d8ab6e325d6e6d77adf881ed6
     </application>
 
 </manifest>
