@@ -20,7 +20,8 @@
         <activity android:name=".ListaProductos" />
         <activity android:name=".Gracias" />
         <activity android:name=".Login" />
-        <activity android:name=".Contacto"></activity>
+        <activity android:name=".Contacto" />
+        <activity android:name=".Registro"></activity>
     </application>
 
 </manifest>
