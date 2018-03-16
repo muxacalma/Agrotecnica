@@ -5,6 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,6 +25,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
     }
 
     public void entrar(View v){
@@ -59,8 +70,39 @@ public class Login extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void facebook(View v){
+        CallbackManager callbackManager = CallbackManager.Factory.create();
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        Intent in=new Intent(Login.this,Categorias.class);
+                        startActivity(in); // App code
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        Toast.makeText(Login.this,"No se ha podido realizar la conexión" , Toast.LENGTH_LONG).show();
+
+                        // App code
+                    }
+                });
+
+    }
 
 
+    @Override
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        CallbackManager callbackManager = CallbackManager.Factory.create();
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
 
 }

@@ -3,19 +3,10 @@ package com.androidnoobs.agrotecnica.agrotecnica;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Window;
+import com.facebook.AccessToken;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -35,7 +26,7 @@ public class Splash extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_splash);
-
+        boolean loggedIn = AccessToken.getCurrentAccessToken() == null;
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
