@@ -16,7 +16,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +41,26 @@ public class ListaProductos extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.d("Recibido",response.toString());
+                        //Log.d("Recibido",response.toString());
+                        try {
+                            ArrayList <Producto> datosproducto=new ArrayList<Producto>();
+                            JSONArray jarray=new JSONArray(response);
+                            for (int i=0; i<jarray.length(); i++){
+                                JSONObject job=jarray.getJSONObject(i);
+                                int id=job.getInt("id");
+                                String nombre=job.getString("nombre");
+                                String descripcion=job.getString("descripcion");
+                                String precio=job.getString("precio");
+                                String imagen=job.getString("imagen");
+                                int stock=job.getInt("stock");
+                                String categoria=job.getString("categoria");
+                                Producto producto=new Producto(id, nombre, descripcion, precio, imagen, stock,categoria);
+                                datosproducto.add(producto);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
 
                     }
                 }, new Response.ErrorListener() {
