@@ -21,6 +21,9 @@ public class Login extends AppCompatActivity {
         String mail=((EditText)findViewById(R.id.email)).getText().toString();
         String contraseña=((EditText)findViewById(R.id.contraseña)).getText().toString();
         String contraseña_encrip=md5(contraseña);
+
+        //FALTA HACER EL SERVICE
+
     }
 
     public static final String md5(final String contraseña) {
