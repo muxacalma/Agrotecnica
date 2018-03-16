@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
     android:layout_height="match_parent"
-    android:background="#02fd1b"
+    android:background="#ffffff"
     tools:context=".Splash" >
 
     <ImageView
@@ -13,6 +14,7 @@
         android:id="@+id/mundo"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
+        android:src="@mipmap/agromediana"
          />
 
 
