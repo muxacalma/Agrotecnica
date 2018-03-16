@@ -1,6 +1,5 @@
 package com.androidnoobs.agrotecnica.agrotecnica;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,23 +8,24 @@ import android.widget.EditText;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Login extends AppCompatActivity {
+public class Registro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registro);
     }
 
-    public void entrar(View v){
+    public void guardad(View v){
+        String nombre=((EditText)findViewById(R.id.nombre)).getText().toString();
+        String apellidos=((EditText)findViewById(R.id.apellidos)).getText().toString();
         String mail=((EditText)findViewById(R.id.email)).getText().toString();
         String contraseña=((EditText)findViewById(R.id.contraseña)).getText().toString();
         String contraseña_encrip=md5(contraseña);
 
+
         //FALTA HACER EL SERVICE
-
     }
-
     public static final String md5(final String contraseña) {
         final String MD5 = "MD5";
         try {
@@ -49,12 +49,4 @@ public class Login extends AppCompatActivity {
         }
         return "";
     }
-
-    public void registrar(View v){
-        /*Intent in=new Intent(this,Registrar.class);
-        startActivity(in);*/
-    }
-
-
-
 }
