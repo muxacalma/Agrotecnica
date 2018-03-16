@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fondoagua"/>
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,12 +24,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ffff"
             android:text="Email" />
 
         <EditText
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:backgroundTint="#ffff"
             android:selectAllOnFocus="false"
             android:singleLine="false" />
     </LinearLayout>
@@ -34,12 +46,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ffff"
             android:text="Contraseña" />
 
         <EditText
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:backgroundTint="#ffff"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -59,7 +74,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#535151"
+            android:textColor="#fff78a"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
             android:background="#00123456"
@@ -99,3 +114,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</RelativeLayout>
