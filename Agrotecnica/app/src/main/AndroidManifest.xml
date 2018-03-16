@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidnoobs.agrotecnica.agrotecnica">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Categorias" />
-        <activity android:name=".ListaProductos" />
+        <activity android:name=".ListaProductos">
+        </activity>
+
         <activity android:name=".Gracias" />
         <activity android:name=".Login" />
         <activity android:name=".Contacto" />
