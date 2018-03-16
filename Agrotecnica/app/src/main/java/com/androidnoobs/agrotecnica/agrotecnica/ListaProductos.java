@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 
 
 import com.android.volley.AuthFailureError;
@@ -26,15 +27,17 @@ import java.util.Map;
 public class ListaProductos extends AppCompatActivity {
 
     private String categoria;
+    ListView lvProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_productos);
 
+        lvProductos=(ListView) this.findViewById(R.id.listProducto);
 
-       // Intent intent = this.getIntent();
-       // categoria = intent.getStringExtra("categoria");
+        Intent intent = this.getIntent();
+        categoria = intent.getStringExtra("categoria");
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest sr = new StringRequest(Request.Method.POST, "http://juansancho.es/agrotecnica/listaProductos.php",
@@ -57,6 +60,7 @@ public class ListaProductos extends AppCompatActivity {
                                 Producto producto=new Producto(id, nombre, descripcion, precio, imagen, stock,categoria);
                                 datosproducto.add(producto);
                             }
+                            cargarLista(datosproducto);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -85,6 +89,10 @@ public class ListaProductos extends AppCompatActivity {
             }*/
         };
         queue.add(sr);
+    }
+
+    public void cargarLista(ArrayList datosproducto){
+
     }
 
 }

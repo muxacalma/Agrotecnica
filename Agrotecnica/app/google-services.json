@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1046816617420",
+    "firebase_url": "https://agrotecnica-50975.firebaseio.com",
+    "project_id": "agrotecnica-50975",
+    "storage_bucket": "agrotecnica-50975.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046816617420:android:6983b2b45e85aa68",
+        "android_client_info": {
+          "package_name": "com.androidnoobs.agrotecnica.agrotecnica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046816617420-b4u7tibi5u402bhpfcgtgdl68b9pnebp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androidnoobs.agrotecnica.agrotecnica",
+            "certificate_hash": "918adb3f386ab7eaa217388b4b0b6ace1cfc1d70"
+          }
+        },
+        {
+          "client_id": "1046816617420-reh6olq3i8fukhee5jukoer65dpt860t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdg7RoSwm7iROcWMr5Nc1qDcObcSy3OG0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046816617420-reh6olq3i8fukhee5jukoer65dpt860t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

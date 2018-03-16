@@ -16,42 +16,6 @@
             android:layout_height="wrap_content"
             android:text="Introduce tus datos"
             android:textSize="30dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre" />
-
-            <EditText
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/nombre"
-
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Apellidos" />
-
-            <EditText
-                android:id="@+id/apellidos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
 
 
         <LinearLayout
@@ -96,6 +60,7 @@
     android:text="GUARDAR"
     android:textColor="#ffff"
     android:textSize="15dp"
+    android:onClick="registroFirebase"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="10dp"
     android:id="@+id/guardar"
