@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Agrotecnica</string>
     <string name="texto_registrate"><u>Registrate gratis</u></string>
+    <string name="facebook_app_id">1830042383714013</string>
+    <string name="fb_login_protocol_scheme">fb1830042383714013</string>
+
 </resources>
