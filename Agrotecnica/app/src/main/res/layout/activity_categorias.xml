@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
+                android:onClick="entrarEnProductos"
                 android:text="Semillas y tierra" />
 
             <Button
@@ -28,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="entrarEnProductos"
                 android:text="Tratamientos" />
         </LinearLayout>
 
@@ -42,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
+                android:onClick="entrarEnProductos"
                 android:text="herramientas de jardinería" />
 
             <Button
@@ -49,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
+                android:onClick="entrarEnProductos"
                 android:text="maquinaria agrícola" />
         </LinearLayout>
 
@@ -56,6 +60,7 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="111dp"
+            android:onClick="entrarEnContacto"
             android:text="contacto" />
     </LinearLayout>
 
