@@ -1,13 +1,14 @@
 package com.androidnoobs.agrotecnica.agrotecnica;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 
 public class Login extends AppCompatActivity {
 
@@ -24,6 +25,9 @@ public class Login extends AppCompatActivity {
 
         //FALTA HACER EL SERVICE
 
+        //SI EL UNUARIO ES CORRECTO SE VA A LA ACTIVITY DE CATEGORIAS
+        Intent in=new Intent(this,Categorias.class);
+        startActivity(in);
     }
 
     public static final String md5(final String contraseña) {
@@ -51,9 +55,11 @@ public class Login extends AppCompatActivity {
     }
 
     public void registrar(View v){
-        /*Intent in=new Intent(this,Registrar.class);
-        startActivity(in);*/
+        Intent in=new Intent(this,Registro.class);
+        startActivity(in);
     }
+
+
 
 
 

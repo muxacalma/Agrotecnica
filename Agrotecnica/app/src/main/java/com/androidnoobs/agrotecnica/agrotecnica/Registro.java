@@ -25,6 +25,8 @@ public class Registro extends AppCompatActivity {
 
 
         //FALTA HACER EL SERVICE
+
+        finish();
     }
     public static final String md5(final String contraseña) {
         final String MD5 = "MD5";
