@@ -8,10 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 public class DetalleProducto extends AppCompatActivity {
 
     TextView nombre, precio, stock, descripciónProducto;
-    ImageView Imagen;
+    ImageView im;
 
 
     @Override
@@ -34,7 +36,9 @@ public class DetalleProducto extends AppCompatActivity {
         descripciónProducto = findViewById(R.id.dpDescricionProducto);
         descripciónProducto.setText(p.getDescripcion().toString());
 
-        Imagen = findViewById(R.id.dpImagen);
+        im = findViewById(R.id.dpImagen);
+        Picasso.with(getApplicationContext()).load(p.getImagen()).into(im);
+
 
     }
 
