@@ -73,5 +73,6 @@
         android:layout_alignLeft="@+id/textView9"
         android:layout_alignStart="@+id/textView9"
         android:layout_alignTop="@+id/textView6"
+        android:onClick="realizarCompra"
         app:srcCompat="?android:attr/actionModeBackground" />
 </RelativeLayout>
