@@ -79,6 +79,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                     public void onSuccess(LoginResult loginResult) {
                         Intent in=new Intent(Login.this,Categorias.class);
                         startActivity(in); // App code
+
                     }
 
                     @Override

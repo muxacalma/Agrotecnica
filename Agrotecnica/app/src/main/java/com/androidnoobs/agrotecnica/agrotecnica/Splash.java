@@ -27,24 +27,42 @@ public class Splash extends Activity {
 
         setContentView(R.layout.activity_splash);
         boolean loggedIn = AccessToken.getCurrentAccessToken() == null;
+        boolean logueado;
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
 
-                // Start the next activity
-                Intent mainIntent = new Intent().setClass(
-                        Splash.this, Login.class);
-                startActivity(mainIntent);
+
+
+                if (isLoggedIn()==true){
+                    Intent in=new Intent(Splash.this,Categorias.class);
+                    startActivity(in);
+                }else{
+                    // Start the next activity
+                    Intent mainIntent = new Intent().setClass(
+                            Splash.this, Login.class);
+                    startActivity(mainIntent);
+                }
 
                 // Close the activity so the user won't able to go back this
                 // activity pressing Back button
                 finish();
             }
+
         };
+
+
 
         // Simulate a long loading process on application startup.
         Timer timer = new Timer();
         timer.schedule(task, SPLASH_SCREEN_DELAY);
+        ;
+
+    }
+
+    public boolean isLoggedIn() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        return accessToken != null;
     }
 
 }
