@@ -36,5 +36,6 @@ public class Contacto extends FragmentActivity implements OnMapReadyCallback {
         LatLng agrotecnica = new LatLng(38.869874, -1.096996);
         mMap.addMarker(new MarkerOptions().position(agrotecnica).title("Marker in agrotecnica"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(agrotecnica));
+        mMap.setMinZoomPreference(14);
     }
 }
