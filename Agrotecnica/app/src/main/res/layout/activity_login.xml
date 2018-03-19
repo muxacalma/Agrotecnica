@@ -48,7 +48,7 @@
             android:textColor="#ffff"
             android:text="Contraseña" />
 
-        <EditText
+        <Password
             android:id="@+id/contraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
