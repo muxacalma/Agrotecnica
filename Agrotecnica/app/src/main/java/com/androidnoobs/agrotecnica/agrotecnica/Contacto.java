@@ -29,11 +29,11 @@ public class Contacto extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
-        LatLng albacete = new LatLng(38.9738639, -1.8530662);
-        mMap.addMarker(new MarkerOptions().position(albacete).title("Marker in Albacete"));
+        LatLng albacete = new LatLng(38.8698686, -1.0991836);
+        mMap.addMarker(new MarkerOptions().position(albacete).title("Marker in AgrotecnicaAlmansa"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(albacete));
     }
 }
