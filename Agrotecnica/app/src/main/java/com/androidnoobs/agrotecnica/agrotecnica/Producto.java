@@ -1,10 +1,13 @@
 package com.androidnoobs.agrotecnica.agrotecnica;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Gemma on 16/03/2018.
  */
 
-public class Producto {
+public class Producto implements Parcelable{
     private int id;
     private String nombre;
     private String descripcion;
@@ -24,6 +27,27 @@ public class Producto {
     }
 
 
+    protected Producto(Parcel in) {
+        id = in.readInt();
+        nombre = in.readString();
+        descripcion = in.readString();
+        precio = in.readString();
+        imagen = in.readString();
+        stock = in.readInt();
+        categoria = in.readString();
+    }
+
+    public static final Creator<Producto> CREATOR = new Creator<Producto>() {
+        @Override
+        public Producto createFromParcel(Parcel in) {
+            return new Producto(in);
+        }
+
+        @Override
+        public Producto[] newArray(int size) {
+            return new Producto[size];
+        }
+    };
 
     public int getId(){
         return id;
@@ -80,4 +104,19 @@ public class Producto {
         this.categoria=categoria;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(nombre);
+        parcel.writeString(descripcion);
+        parcel.writeString(precio);
+        parcel.writeString(imagen);
+        parcel.writeInt(stock);
+        parcel.writeString(categoria);
+    }
 }
