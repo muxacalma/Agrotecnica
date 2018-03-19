@@ -53,12 +53,16 @@ public class Categorias extends AppCompatActivity {
         switch(v.getId()){
             case R.id.button:
                 producto="Semillas";
+                break;
             case R.id.button2:
                 producto="Tratamientos";
+                break;
             case R.id.button3:
                 producto="Herramientas";
+                break;
             case R.id.button4:
                 producto="Maquinaria";
+                break;
         }
         Intent intent=new Intent(this, ListaProductos.class);
         intent.putExtra("categoria", producto);

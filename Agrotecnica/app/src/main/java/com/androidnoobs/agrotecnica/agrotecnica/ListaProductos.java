@@ -3,6 +3,7 @@ package com.androidnoobs.agrotecnica.agrotecnica;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -82,6 +83,7 @@ public class ListaProductos extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("categoria", categoria);
+                Log.d("PARAMS", params.toString());
 
                 return params;
             }
