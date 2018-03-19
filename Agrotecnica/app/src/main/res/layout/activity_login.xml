@@ -48,12 +48,15 @@
             android:textColor="#ffff"
             android:text="Contraseña" />
 
-        <Password
-            android:id="@+id/contraseña"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffff"
-            android:backgroundTint="#ffff"/>
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        
     </LinearLayout>
 
     <RelativeLayout
