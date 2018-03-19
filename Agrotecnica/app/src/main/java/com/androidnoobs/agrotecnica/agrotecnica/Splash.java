@@ -28,7 +28,7 @@ public class Splash extends Activity {
 
         setContentView(R.layout.activity_splash);
         boolean loggedIn = AccessToken.getCurrentAccessToken() == null;
-        boolean logueado;
+
         final FirebaseAuth auth = FirebaseAuth.getInstance();
 
         TimerTask task = new TimerTask() {
