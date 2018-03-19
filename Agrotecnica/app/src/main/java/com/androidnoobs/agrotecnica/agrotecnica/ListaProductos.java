@@ -1,6 +1,7 @@
 package com.androidnoobs.agrotecnica.agrotecnica;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +35,7 @@ public class ListaProductos extends AppCompatActivity {
     private String categoria;
     ListView lvProductos;
     ArrayList <Producto> datosproducto=new ArrayList<Producto>();
+    AdapterProducto adapterProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,16 +101,15 @@ public class ListaProductos extends AppCompatActivity {
 
     public void cargarLista(final ArrayList datosproducto){
         lvProductos=(ListView) this.findViewById(R.id.listProducto);
-        ArrayAdapter<Producto> adpList=new ArrayAdapter<Producto>(this,R.layout.activity_vista_list_view
-                ,datosproducto);
-        lvProductos.setAdapter(adpList);
+        adapterProducto=new AdapterProducto(this, datosproducto);
+        lvProductos.setAdapter(adapterProducto);
 
         lvProductos.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent=new Intent(ListaProductos.this,DetalleProducto.class);
-                intent.putExtra("producto",((Producto)datosproducto.get(i)).getId());
+                intent.putExtra("producto", (Parcelable) datosproducto.get(i));
                 ListaProductos.this.startActivity(intent);
 
             }
