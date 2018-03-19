@@ -30,10 +30,10 @@ public class Contacto extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        //mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         LatLng agrotecnica = new LatLng(38.869874, -1.096996);
-        mMap.addMarker(new MarkerOptions().position(agrotecnica).title("Marker in AgrotecnicaAlmansa"));
+        mMap.addMarker(new MarkerOptions().position(agrotecnica).title("Marker in agrotecnica"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(agrotecnica));
     }
 }
