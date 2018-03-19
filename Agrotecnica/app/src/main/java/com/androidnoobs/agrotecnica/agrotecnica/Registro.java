@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,8 +24,10 @@ public class Registro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        mAuth = FirebaseAuth.getInstance();
     }
 
 
@@ -33,7 +36,7 @@ public class Registro extends AppCompatActivity {
     public void registroFirebase(View v) {
 
         final String email = ((EditText) findViewById(R.id.email)).getText().toString();
-        final String password = ((EditText) findViewById(R.id.contraseña)).getText().toString();
+        final String password = ((EditText) findViewById(R.id.contrasena)).getText().toString();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -52,9 +55,10 @@ public class Registro extends AppCompatActivity {
                             editor.putString("email",email);
                             editor.putString("contraseña",password);
                         } else {
+                            Log.d("VICTORIA", task.getException()+"----");
                             // If sign in fails, display a message to the user.
 
-                            Toast.makeText(Registro.this, "No se ha podido realizar autentificación.",
+                            Toast.makeText(Registro.this, "Esta cuenta ya está en uso .",
                                     Toast.LENGTH_SHORT).show();
 //                            updateUI(null);
                         }

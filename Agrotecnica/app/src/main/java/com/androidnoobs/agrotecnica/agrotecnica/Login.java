@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
 
     public void loginFirebase(View v) {
         final String email = ((EditText) findViewById(R.id.email)).getText().toString();
-        final String password = ((EditText) findViewById(R.id.contraseña)).getText().toString();
+        final String password = ((EditText) findViewById(R.id.contrasena)).getText().toString();
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
