@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Categorias" />
-        <activity android:name=".ListaProductos"></activity>
+        <activity android:name=".ListaProductos" />
         <activity android:name=".Gracias" />
         <activity android:name=".Login" />
         <activity android:name=".Contacto" />
@@ -28,8 +28,9 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCv4UGYMac5BcluBLb4FT0ZtSx-_lyEg4g"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCv4UGYMac5BcluBLb4FT0ZtSx-_lyEg4g" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -47,7 +48,8 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".vistaListView"></activity>
+        <activity android:name=".vistaListView" />
+        <activity android:name=".DetalleProducto"></activity>
     </application>
 
 </manifest>
