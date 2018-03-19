@@ -19,10 +19,20 @@ public class DetalleProducto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_producto);
 
+        Intent i = getIntent();
+        Producto p = i.getParcelableExtra("producto");
+
         nombre = findViewById(R.id.dpNombreProducto);
+        nombre.setText(p.getNombre().toString());
+
         precio = findViewById(R.id.dpPrecio);
+        precio.setText(p.getPrecio().toString());
+
         stock = findViewById(R.id.dpStock);
+        stock.setText("" + p.getStock());
+
         descripciónProducto = findViewById(R.id.dpDescricionProducto);
+        descripciónProducto.setText(p.getDescripcion().toString());
 
         Imagen = findViewById(R.id.dpImagen);
 

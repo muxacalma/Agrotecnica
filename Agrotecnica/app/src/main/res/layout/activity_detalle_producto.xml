@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/dpPrecio"
         android:layout_alignTop="@+id/dpImagen"
-        android:text="Nombre Producto" />
+        android:text="Nombre Producto"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dpPrecio"
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/dpStock"
         android:layout_below="@+id/dpNombreProducto"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="37dp"
         android:text="Precio"
         android:textStyle="bold" />
 
@@ -29,9 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dpPrecio"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="27dp"
         android:layout_toEndOf="@+id/dpComprar"
-        android:text="Stock" />
+        android:text="Stock"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dpDescricionProducto"
@@ -41,7 +43,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="Descripción producto" />
+        android:text="Descripción producto"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/dpComprar"
@@ -51,7 +54,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
         android:onClick="realizarCompra"
-        android:text="Comprar" />
+        android:text="Comprar"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/dpImagen"
