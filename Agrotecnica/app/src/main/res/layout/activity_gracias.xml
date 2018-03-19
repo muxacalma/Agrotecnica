@@ -12,5 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Gracias por confiar en nosotros " />
+        android:text="Gracias por confiar en nosotros "
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 </RelativeLayout>
