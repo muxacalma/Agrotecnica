@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.facebook.login.LoginManager;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Gracias extends AppCompatActivity {
 
@@ -20,6 +21,9 @@ public class Gracias extends AppCompatActivity {
             case R.id.action_poweroff:
                //logout
                 LoginManager.getInstance().logOut();
+
+               FirebaseAuth.getInstance().signOut();
+               //intent a login
                 return true;
 
 
