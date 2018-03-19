@@ -109,7 +109,7 @@ public class ListaProductos extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent=new Intent(ListaProductos.this,DetalleProducto.class);
-                intent.putExtra("producto", (Parcelable) datosproducto.get(i));
+                intent.putExtra("producto", (Producto) datosproducto.get(i));
                 ListaProductos.this.startActivity(intent);
 
             }
