@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Agrotecnica.iml" filepath="$PROJECT_DIR$/Agrotecnica.iml" />
-      <module fileurl="file://C:\Users\portatil\Documents\GitHub\Agrotecnica\Agrotecnica\Agrotecnica.iml" filepath="C:\Users\portatil\Documents\GitHub\Agrotecnica\Agrotecnica\Agrotecnica.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\portatil\Documents\GitHub\Agrotecnica\Agrotecnica\app\app.iml" filepath="C:\Users\portatil\Documents\GitHub\Agrotecnica\Agrotecnica\app\app.iml" />
     </modules>
   </component>
 </project>
