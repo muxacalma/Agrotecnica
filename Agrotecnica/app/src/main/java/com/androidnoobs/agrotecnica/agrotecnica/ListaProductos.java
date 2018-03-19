@@ -4,7 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CursorAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 
 import com.android.volley.AuthFailureError;
@@ -28,13 +33,14 @@ public class ListaProductos extends AppCompatActivity {
 
     private String categoria;
     ListView lvProductos;
+    ArrayList <Producto> datosproducto=new ArrayList<Producto>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_productos);
 
-        lvProductos=(ListView) this.findViewById(R.id.listProducto);
+
 
         Intent intent = this.getIntent();
         categoria = intent.getStringExtra("categoria");
@@ -46,7 +52,7 @@ public class ListaProductos extends AppCompatActivity {
                     public void onResponse(String response) {
                         //Log.d("Recibido",response.toString());
                         try {
-                            ArrayList <Producto> datosproducto=new ArrayList<Producto>();
+
                             JSONArray jarray=new JSONArray(response);
                             for (int i=0; i<jarray.length(); i++){
                                 JSONObject job=jarray.getJSONObject(i);
@@ -76,7 +82,7 @@ public class ListaProductos extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("categoria", "Semillas");
+                params.put("categoria", categoria);
 
                 return params;
             }
@@ -91,7 +97,22 @@ public class ListaProductos extends AppCompatActivity {
         queue.add(sr);
     }
 
-    public void cargarLista(ArrayList datosproducto){
+    public void cargarLista(final ArrayList datosproducto){
+        lvProductos=(ListView) this.findViewById(R.id.listProducto);
+        ArrayAdapter<Producto> adpList=new ArrayAdapter<Producto>(this,R.layout.activity_vista_list_view
+                ,datosproducto);
+        lvProductos.setAdapter(adpList);
+
+        lvProductos.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent=new Intent(ListaProductos.this,DetalleProducto.class);
+                intent.putExtra("producto",((Producto)datosproducto.get(i)).getId());
+                ListaProductos.this.startActivity(intent);
+
+            }
+        });
 
     }
 
