@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 
 import com.facebook.AccessToken;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -28,6 +29,8 @@ public class Splash extends Activity {
         setContentView(R.layout.activity_splash);
         boolean loggedIn = AccessToken.getCurrentAccessToken() == null;
         boolean logueado;
+        final FirebaseAuth auth = FirebaseAuth.getInstance();
+
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
@@ -38,11 +41,16 @@ public class Splash extends Activity {
                     Intent in=new Intent(Splash.this,Categorias.class);
                     startActivity(in);
                 }else{
-                    // Start the next activity
-                    Intent mainIntent = new Intent().setClass(
-                            Splash.this, Login.class);
-                    startActivity(mainIntent);
-                }
+                    if(auth.getCurrentUser() != null){
+                        Intent in=new Intent(Splash.this,Categorias.class);
+                        startActivity(in);
+                    }else{
+                        // Start the next activity
+                        Intent mainIntent = new Intent().setClass(
+                                Splash.this, Login.class);
+                        startActivity(mainIntent);
+                    }
+                    }
 
                 // Close the activity so the user won't able to go back this
                 // activity pressing Back button
