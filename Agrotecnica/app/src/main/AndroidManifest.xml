@@ -12,11 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Categorias" />
         <activity android:name=".ListaProductos" />
@@ -49,7 +45,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".vistaListView" />
-        <activity android:name=".DetalleProducto"></activity>
+        <activity android:name=".DetalleProducto"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
