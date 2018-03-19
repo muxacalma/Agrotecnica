@@ -1,6 +1,7 @@
 package com.androidnoobs.agrotecnica.agrotecnica;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -21,8 +22,9 @@ public class Contacto extends FragmentActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+        FragmentManager fm=this.getSupportFragmentManager();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+               .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
