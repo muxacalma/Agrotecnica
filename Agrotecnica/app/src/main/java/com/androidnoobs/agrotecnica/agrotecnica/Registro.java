@@ -31,8 +31,6 @@ public class Registro extends AppCompatActivity {
     }
 
 
-
-
     public void registroFirebase(View v) {
 
         final String email = ((EditText) findViewById(R.id.email)).getText().toString();
@@ -46,19 +44,19 @@ public class Registro extends AppCompatActivity {
 
                             FirebaseUser user = mAuth.getCurrentUser();
                             // intent a categorias
-                            Intent in=new Intent(Registro.this,Categorias.class);
+                            Intent in = new Intent(Registro.this, Categorias.class);
                             startActivity(in);
                             // updateUI(user);
 
-                            SharedPreferences sp=Registro.this.getSharedPreferences("email", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor=sp.edit();
-                            editor.putString("email",email);
-                            editor.putString("contraseña",password);
+                            SharedPreferences sp = Registro.this.getSharedPreferences("email", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.putString("email", email);
+                            editor.putString("contraseña", password);
                         } else {
-                            Log.d("VICTORIA", task.getException()+"----");
+                            Log.d("VICTORIA", task.getException() + "----");
                             // If sign in fails, display a message to the user.
 
-                            Toast.makeText(Registro.this, "Esta cuenta ya está en uso .",
+                            Toast.makeText(Registro.this, "No es posible registrar, prueba añadiendo una contraseña de mas de 6 caracteres o posiblemente ya estes registrado .",
                                     Toast.LENGTH_SHORT).show();
 //                            updateUI(null);
                         }
@@ -68,5 +66,20 @@ public class Registro extends AppCompatActivity {
                 });
     }
 
+    public void cambiar(View v) {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String emailAddress = "user@example.com";
 
+        auth.sendPasswordResetEmail(emailAddress)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Log.d("VICTORIA", "Email sent.");
+                        }
+                    }
+
+                });
+
+    }
 }

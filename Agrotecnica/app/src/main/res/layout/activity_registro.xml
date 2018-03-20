@@ -68,6 +68,15 @@
     android:layout_marginTop="10dp"
     android:id="@+id/guardar"
     />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2dac34"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:onClick="cambiar"
+                android:background="#00123456"
+                android:text="@string/texto_cambiar" />
         </RelativeLayout>
 
     </LinearLayout>
