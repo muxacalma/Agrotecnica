@@ -241,7 +241,8 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("VICTORIA", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-
+                            Intent in=new Intent(Login.this,Categorias.class);
+                            startActivity(in);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("VICTORIA", "signInWithCredential:failure", task.getException());
