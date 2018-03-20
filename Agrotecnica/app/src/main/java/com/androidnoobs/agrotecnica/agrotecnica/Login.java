@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
 // Initialize Firebase Auth
 
 // ...
+
         mAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -61,39 +62,9 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         setContentView(R.layout.activity_login);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        mCallbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
-        loginButton.setReadPermissions("email", "public_profile");
-        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Log.d("VICTORIA", "facebook:onSuccess:" + loginResult);
-                handleFacebookAccessToken(loginResult.getAccessToken());
-                Intent in=new Intent(Login.this,Categorias.class);
-                startActivity(in);
-                Toast.makeText(Login.this, "esto es una mierda.",
-                        Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onCancel() {
-                Log.d("VICTORIA", "facebook:onCancel");
-                Toast.makeText(Login.this, "Authentication cancel.",
-                        Toast.LENGTH_SHORT).show();
-                // ...
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Log.d("VICTORIA", "facebook:onError", error);
-                Toast.makeText(Login.this, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show();
-                // ...
-            }
-        });
 
 // ...
-
 
     }
     @Override
@@ -232,8 +203,45 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                     }
                 });
     }
+    public void facebookcalling (View v) {
+        CallbackManager mCallbackMangager= new CallbackManager() {
+            @Override
+            public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+                return false;
+            }
+        };
+        mCallbackManager = CallbackManager.Factory.create();
+        LoginButton loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
+        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
 
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d("VICTORIA", "facebook:onSuccess:" + loginResult);
+                handleFacebookAccessToken(loginResult.getAccessToken());
+                Intent in = new Intent(Login.this, Categorias.class);
+                startActivity(in);
+                Toast.makeText(Login.this, "esto es una mierda.",
+                        Toast.LENGTH_SHORT).show();
+            }
 
+            @Override
+            public void onCancel() {
+                Log.d("VICTORIA", "facebook:onCancel");
+                Toast.makeText(Login.this, "Authentication cancel.",
+                        Toast.LENGTH_SHORT).show();
+                // ...
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d("VICTORIA", "facebook:onError", error);
+                Toast.makeText(Login.this, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show();
+                // ...
+            }
+        });
+    }
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
