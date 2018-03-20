@@ -69,17 +69,25 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
             public void onSuccess(LoginResult loginResult) {
                 Log.d("VICTORIA", "facebook:onSuccess:" + loginResult);
                 handleFacebookAccessToken(loginResult.getAccessToken());
+                Intent in=new Intent(Login.this,Categorias.class);
+                startActivity(in);
+                Toast.makeText(Login.this, "esto es una mierda.",
+                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancel() {
                 Log.d("VICTORIA", "facebook:onCancel");
+                Toast.makeText(Login.this, "Authentication cancel.",
+                        Toast.LENGTH_SHORT).show();
                 // ...
             }
 
             @Override
             public void onError(FacebookException error) {
                 Log.d("VICTORIA", "facebook:onError", error);
+                Toast.makeText(Login.this, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show();
                 // ...
             }
         });
@@ -206,10 +214,11 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-
                             Intent in=new Intent(Login.this,Categorias.class);
                             startActivity(in);
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+
 
                         } else {
                             // If sign in fails, display a message to the user.
@@ -241,8 +250,8 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("VICTORIA", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent in=new Intent(Login.this,Categorias.class);
-                            startActivity(in);
+                            Toast.makeText(Login.this, "esto es una mierda 2.",
+                                    Toast.LENGTH_SHORT).show();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("VICTORIA", "signInWithCredential:failure", task.getException());
