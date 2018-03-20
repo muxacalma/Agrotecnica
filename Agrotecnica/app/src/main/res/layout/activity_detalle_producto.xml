@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.androidnoobs.agrotecnica.agrotecnica.DetalleProducto">
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"
+        android:src="@drawable/barley"/>
     <TextView
         android:id="@+id/dpNombreProducto"
         android:layout_width="wrap_content"

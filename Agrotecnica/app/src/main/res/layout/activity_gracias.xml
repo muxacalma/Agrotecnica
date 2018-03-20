@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.androidnoobs.agrotecnica.agrotecnica.Gracias">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"
+        android:src="@drawable/barley"/>
 
     <TextView
         android:id="@+id/textView"
@@ -14,7 +20,7 @@
         android:layout_centerVertical="true"
         android:text="Gracias por confiar en nosotros "
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="bold" />
 </RelativeLayout>
