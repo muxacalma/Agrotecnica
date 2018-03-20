@@ -17,6 +17,7 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
@@ -62,6 +63,30 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         setContentView(R.layout.activity_login);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
+
+        mCallbackManager = CallbackManager.Factory.create();
+
+
+        LoginManager.getInstance().registerCallback(mCallbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                        Toast.makeText(getApplicationContext(), "Login Correcto :)", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                        Toast.makeText(getApplicationContext(), "Login Cancelado :)", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // App code
+                        Toast.makeText(getApplicationContext(), "Login Incorrecto :)", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
 // ...
@@ -151,6 +176,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
 
 
 
@@ -162,7 +188,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
                 // Pass the activity result back to the Facebook SDK
-                mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
@@ -213,6 +239,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton loginButton = (LoginButton) findViewById(R.id.button_facebook_login);
         loginButton.setReadPermissions("email", "public_profile");
+        //LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
         loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
 
             @Override
@@ -221,8 +248,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                 handleFacebookAccessToken(loginResult.getAccessToken());
                 Intent in = new Intent(Login.this, Categorias.class);
                 startActivity(in);
-                Toast.makeText(Login.this, "esto es una mierda.",
-                        Toast.LENGTH_SHORT).show();
+                
             }
 
             @Override
@@ -258,8 +284,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("VICTORIA", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(Login.this, "esto es una mierda 2.",
-                                    Toast.LENGTH_SHORT).show();
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("VICTORIA", "signInWithCredential:failure", task.getException());
