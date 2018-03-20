@@ -5,18 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.androidnoobs.agrotecnica.agrotecnica.DetalleProducto">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:alpha="0.7"
-        android:src="@drawable/barley"/>
+
     <TextView
         android:id="@+id/dpNombreProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/dpPrecio"
         android:layout_alignTop="@+id/dpImagen"
+        android:layout_marginStart="60dp"
+        android:layout_toEndOf="@+id/dpImagen"
         android:text="Nombre Producto"
         android:textStyle="bold" />
 
@@ -24,9 +20,9 @@
         android:id="@+id/dpPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/dpStock"
+        android:layout_alignStart="@+id/dpNombreProducto"
         android:layout_below="@+id/dpNombreProducto"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="20dp"
         android:text="Precio"
         android:textStyle="bold" />
 
@@ -34,30 +30,30 @@
         android:id="@+id/dpStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dpPrecio"
         android:layout_below="@+id/dpPrecio"
         android:layout_marginTop="27dp"
-        android:layout_toEndOf="@+id/dpComprar"
         android:text="Stock"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dpDescricionProducto"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:layout_above="@+id/dpComprar"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dpImagen"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
         android:text="Descripción producto"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/dpComprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
+        android:layout_alignBottom="@+id/dpImagen"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/dpNombreProducto"
         android:onClick="realizarCompra"
         android:text="Comprar"
         android:textStyle="bold" />
@@ -68,8 +64,8 @@
         android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="29dp"
         android:onClick="realizarCompra"
         app:srcCompat="?android:attr/actionModeBackground" />
 </RelativeLayout>
