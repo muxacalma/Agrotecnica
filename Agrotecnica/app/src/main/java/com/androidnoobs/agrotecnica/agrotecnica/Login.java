@@ -56,6 +56,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         setContentView(R.layout.activity_login);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
+
     }
     @Override
     public void onStart() {
@@ -79,18 +80,20 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                     public void onSuccess(LoginResult loginResult) {
                         Intent in=new Intent(Login.this,Categorias.class);
                         startActivity(in); // App code
-
+                        Log.d("VICTORIA","facebook:onSuccess:"+loginResult);
+                        
                     }
 
                     @Override
                     public void onCancel() {
+                        Log.d("VICTORIA","facebook:onCancel");
                         // App code
                     }
 
                     @Override
-                    public void onError(FacebookException exception) {
+                    public void onError(FacebookException  error) {
                         Toast.makeText(Login.this,"No se ha podido realizar la conexión" , Toast.LENGTH_LONG).show();
-
+                        Log.d("VICTORIA","facebook:onError",error);
                         // App code
                     }
                 });
