@@ -25,7 +25,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.firebase:firebase-auth:11.0.4'
     compile 'com.google.android.gms:play-services-auth:11.0.4'
-
+    compile 'com.google.firebase:firebase-auth:11.0.4'
     testImplementation 'junit:junit:4.12'
     //IMPORTAR LIBRERIA VOLLEY
     compile 'com.android.volley:volley:1.0.0'
