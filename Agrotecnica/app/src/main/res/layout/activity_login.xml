@@ -63,14 +63,15 @@
 
         <Button
             android:id="@+id/entrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:background="#a5bf11"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/btnfondo"
             android:onClick="loginFirebase"
             android:text="ENTRAR"
-            android:textColor="@color/background_floating_material_light"
+            android:textColor="#050404"
             android:textStyle="bold" />
 
         <Button
