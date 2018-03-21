@@ -11,6 +11,7 @@
         android:scaleType="centerCrop"
         android:alpha="0.7"
         android:src="@mipmap/barley"/>
+
     <TextView
         android:id="@+id/dpNombreProducto"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         android:layout_alignStart="@+id/dpPrecio"
         android:layout_alignTop="@+id/dpImagen"
         android:text="Nombre Producto"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -28,6 +30,7 @@
         android:layout_below="@+id/dpNombreProducto"
         android:layout_marginTop="37dp"
         android:text="Precio"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -38,6 +41,7 @@
         android:layout_marginTop="27dp"
         android:layout_toEndOf="@+id/dpComprar"
         android:text="Stock"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -49,6 +53,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="Descripción producto"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <Button

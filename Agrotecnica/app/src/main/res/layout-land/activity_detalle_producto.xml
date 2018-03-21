@@ -14,6 +14,7 @@
         android:layout_marginStart="60dp"
         android:layout_toEndOf="@+id/dpImagen"
         android:text="Nombre Producto"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -24,6 +25,7 @@
         android:layout_below="@+id/dpNombreProducto"
         android:layout_marginTop="20dp"
         android:text="Precio"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -34,6 +36,7 @@
         android:layout_below="@+id/dpPrecio"
         android:layout_marginTop="27dp"
         android:text="Stock"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <TextView
@@ -44,6 +47,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text="Descripción producto"
+        android:textColor="@color/colorAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
