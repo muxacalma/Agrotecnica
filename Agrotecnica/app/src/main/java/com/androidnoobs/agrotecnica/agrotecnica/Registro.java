@@ -67,6 +67,8 @@ public class Registro extends AppCompatActivity {
     }
 
     public void cambiar(View v) {
+
+        Toast.makeText(getApplicationContext(), "Te hemos enviado un email para que restablezcas tu contraseña", Toast.LENGTH_SHORT).show();
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String emailAddress = "user@example.com";
 
