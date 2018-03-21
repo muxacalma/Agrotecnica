@@ -67,10 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@android:color/background_light"
+            android:background="#b7ef55"
             android:onClick="loginFirebase"
             android:text="ENTRAR"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/background_floating_material_light"
             android:textStyle="bold" />
 
         <Button
