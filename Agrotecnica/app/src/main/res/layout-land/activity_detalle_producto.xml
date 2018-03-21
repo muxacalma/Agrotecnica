@@ -53,11 +53,13 @@
 
     <Button
         android:id="@+id/dpComprar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/dpImagen"
-        android:layout_marginStart="40dp"
-        android:layout_toEndOf="@+id/dpNombreProducto"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/btnfondo"
         android:onClick="realizarCompra"
         android:text="Comprar"
         android:textStyle="bold" />
