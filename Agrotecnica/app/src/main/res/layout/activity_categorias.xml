@@ -38,6 +38,7 @@
                 android:layout_height="200dp"
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
+                android:background="@mipmap/abonook"
                 android:text="Tratamientos" />
         </LinearLayout>
 
