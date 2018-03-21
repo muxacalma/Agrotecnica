@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     tools:context="com.androidnoobs.agrotecnica.agrotecnica.Registro">
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"
+        android:src="@mipmap/barley"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         android:orientation="vertical">
-        <TextView
+        <LinearLayout
+         android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+          <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Introduce tus datos"
@@ -71,7 +81,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#2dac34"
+                android:textColor="#227b27"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="70dp"
                 android:onClick="cambiar"
@@ -80,6 +90,6 @@
         </RelativeLayout>
 
     </LinearLayout>
+    </LinearLayout>
 
-
-</LinearLayout>
+</RelativeLayout>
