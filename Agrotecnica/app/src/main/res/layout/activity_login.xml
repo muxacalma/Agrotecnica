@@ -19,21 +19,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textColor="@color/colorAccent" />
+        android:orientation="horizontal">
 
         <EditText
 
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="57dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:backgroundTint="@color/colorAccent"
+            android:hint="Email"
             android:textColor="#ffff" />
     </LinearLayout>
 
@@ -43,19 +42,16 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contraseña"
-            android:textColor="@color/colorAccent" />
-
         <EditText
             android:id="@+id/contrasena"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:ems="10"
+            android:hint="Contraseña"
             android:inputType="textPassword" />
 
         
@@ -71,10 +67,11 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:background="@android:color/background_light"
             android:onClick="loginFirebase"
-            android:background="@mipmap/botonverde"
-            android:textColor="#ffffff"
-            android:text="ENTRAR" />
+            android:text="ENTRAR"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
@@ -84,7 +81,8 @@
             android:background="#00123456"
             android:onClick="registrar"
             android:text="@string/texto_registrate"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
