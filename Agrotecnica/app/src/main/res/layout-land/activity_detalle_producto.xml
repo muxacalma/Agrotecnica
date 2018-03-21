@@ -45,7 +45,7 @@
         android:layout_height="match_parent"
         android:layout_alignEnd="@+id/dpNombreProducto"
         android:layout_below="@+id/dpImagen"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:text="Descripción producto"
         android:textColor="@color/colorAccent"
         android:textSize="14sp"
