@@ -7,15 +7,14 @@
     android:background="#ffffff"
     tools:context=".Splash" >
 
-    <ImageView
+
+    <pl.doidsonroids.gif.GifImageView
+        android:id="@+id/mundo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:id="@+id/mundo"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:src="@mipmap/agromediana"
-         />
-
+        android:src="@drawable/gif" />
 
 </RelativeLayout>
