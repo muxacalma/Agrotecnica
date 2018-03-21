@@ -21,11 +21,13 @@
          android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="vertical">
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Introduce tus datos"
-            android:textSize="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introduce tus datos"
+                android:textColor="@color/colorAccent"
+                android:textSize="30dp" />
 
 
         <LinearLayout
@@ -37,12 +39,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email" />
+                android:text="Email"
+                android:textColor="@color/colorAccent" />
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,15 +57,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contraseña" />
+                android:text="Contraseña"
+                android:textColor="@color/colorAccent" />
 
             <EditText
                 android:id="@+id/contrasena"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
                 android:ems="10"
-                android:inputType="textPassword"  />
+                android:inputType="textPassword" />
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -78,15 +84,16 @@
     android:layout_marginTop="10dp"
     android:id="@+id/guardar"
     />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#227b27"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="70dp"
-                android:onClick="cambiar"
                 android:background="#00123456"
-                android:text="@string/texto_cambiar" />
+                android:onClick="cambiar"
+                android:text="@string/texto_cambiar"
+                android:textColor="@color/colorAccent" />
         </RelativeLayout>
 
     </LinearLayout>

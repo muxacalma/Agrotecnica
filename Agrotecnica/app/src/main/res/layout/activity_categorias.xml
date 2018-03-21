@@ -29,20 +29,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:onClick="entrarEnProductos"
-                android:background="@mipmap/semitie"
                 android:alpha="0.7"
-                android:text="Semillas y tierra" />
+                android:background="@mipmap/semitie"
+                android:onClick="entrarEnProductos"
+                android:text="Semillas y tierra"
+                android:textColor="@android:color/background_dark"
+                android:textColorLink="@android:color/background_dark" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:onClick="entrarEnProductos"
-                android:background="@mipmap/abonook"
                 android:alpha="0.7"
-                android:text="Tratamientos" />
+                android:background="@mipmap/abonook"
+                android:onClick="entrarEnProductos"
+                android:text="Tratamientos"
+                android:textColor="@android:color/background_dark"
+                android:textColorLink="@android:color/background_dark" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,20 +61,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:onClick="entrarEnProductos"
-                android:background="@mipmap/herramientasj"
                 android:alpha="0.7"
-                android:text="herramientas de jardinería" />
+                android:background="@mipmap/herramientasj"
+                android:onClick="entrarEnProductos"
+                android:text="herramientas de jardinería"
+                android:textColor="@android:color/background_dark" />
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:onClick="entrarEnProductos"
-                android:background="@mipmap/maquina"
                 android:alpha="0.7"
-                android:text="maquinaria agrícola" />
+                android:background="@mipmap/maquina"
+                android:onClick="entrarEnProductos"
+                android:text="maquinaria agrícola"
+                android:textColor="@android:color/background_dark" />
         </LinearLayout>
 
         <Button
@@ -80,7 +86,8 @@
             android:layout_weight="20"
             android:backgroundTint="@color/colorAccent"
             android:onClick="entrarEnContacto"
-            android:text="contacto" />
+            android:text="contacto"
+            android:textColor="@android:color/background_dark" />
 
     </LinearLayout>
 

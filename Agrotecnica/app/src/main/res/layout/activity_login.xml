@@ -79,12 +79,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff78a"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
-            android:onClick="registrar"
             android:background="#00123456"
-            android:text="@string/texto_registrate" />
+            android:onClick="registrar"
+            android:text="@string/texto_registrate"
+            android:textColor="@color/colorAccent" />
     </RelativeLayout>
 
     <LinearLayout
