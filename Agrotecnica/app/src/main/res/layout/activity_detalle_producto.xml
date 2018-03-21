@@ -64,6 +64,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
         android:onClick="realizarCompra"
+        android:background="@mipmap/botonverde"
         android:text="Comprar"
         android:textStyle="bold" />
 
