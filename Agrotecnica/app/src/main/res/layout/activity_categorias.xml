@@ -31,6 +31,7 @@
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
                 android:background="@mipmap/semitie"
+                android:alpha="0.7"
                 android:text="Semillas y tierra" />
 
             <Button
@@ -40,6 +41,7 @@
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
                 android:background="@mipmap/abonook"
+                android:alpha="0.7"
                 android:text="Tratamientos" />
         </LinearLayout>
 
@@ -57,6 +59,7 @@
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
                 android:background="@mipmap/herramientasj"
+                android:alpha="0.7"
                 android:text="herramientas de jardinería" />
 
             <Button
@@ -66,6 +69,7 @@
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
                 android:background="@mipmap/maquina"
+                android:alpha="0.7"
                 android:text="maquinaria agrícola" />
         </LinearLayout>
 
@@ -74,6 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="111dp"
             android:layout_weight="20"
+            android:backgroundTint="@color/colorAccent"
             android:onClick="entrarEnContacto"
             android:text="contacto" />
 
