@@ -30,6 +30,7 @@
                 android:layout_height="200dp"
                 android:layout_weight="1"
                 android:onClick="entrarEnProductos"
+                android:background="@mipmap/semitie"
                 android:text="Semillas y tierra" />
 
             <Button
